@@ -432,3 +432,92 @@
 //     console.log(result);
 //   })
 //   .catch((error) => console.log(error));
+
+// * REGULAR EXPRESSIONS
+
+//! Apply the regex myRegex on the string myString using the .test() method.
+
+// let myString = "Hello, World!";
+// let myRegex = /Hello/;
+// let result = myRegex.test(myString);
+
+// ! Complete the regex waldoRegex to find "Waldo" in the string waldoIsHiding with a literal match.
+
+// let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
+// let waldoRegex = /Waldo/;
+// let result = waldoRegex.test(waldoIsHiding);
+
+// ! Complete the regex petRegex to match the pets dog, cat, bird, or fish.
+
+// let petString = "James has a pet cat.";
+// let petRegex = /dog|cat|bird|fish/;
+// let result = petRegex.test(petString);
+
+// ! Write a regex fccRegex to match freeCodeCamp, no matter its case. Your regex should not match any abbreviations or variations with spaces.
+
+// let myString = "freeCodeCamp";
+// let fccRegex = /freeCodeCamp/i;
+// let result = fccRegex.test(myString);
+// console.log(result);
+
+// ! Apply the .match() method to extract the string coding.
+// let extractStr = "Extract the word 'coding' from this string.";
+// let codingRegex = /coding/;
+// let result = extractStr.match(codingRegex);
+// console.log(result);
+
+//! Using the regex starRegex, find and extract both Twinkle words from the string twinkleStar.
+//! Note - You can have multiple flags on your regex like /search/gi
+// let twinkleStar = "Twinkle, twinkle, little star";
+// let starRegex = /Twinkle/gi;
+// let result = twinkleStar.match(starRegex);
+
+// console.log(result);
+
+//! Complete the regex unRegex so that it matches the strings run, sun, fun, pun, nun, and bun. Your regex should use the wildcard character.
+// let exampleStr = "Let's have fun with regular expressions!";
+// let unRegex = /un./;
+// let result = unRegex.test(exampleStr);
+
+//! Use a character class with vowels (a, e, i, o, u) in your regex vowelRegex to find all the vowels in the string quoteSample. Note: Be sure to match both upper- and lowercase vowels.
+// let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+// let vowelRegex = /[aeiou]/gi;
+// let result = vowelRegex.test(quoteSample);
+// console.log(result);
+// console.log(quoteSample.match(vowelRegex));
+
+//! Match all the letters in the string quoteSample.Note: Be sure to match both uppercase and lowercase letters.
+// let quoteSample = "The quick brown fox jumps over the lazy dog.";
+// let alphabetRegex = /[a-z]/gi;
+// let result = quoteSample.match(alphabetRegex);
+
+// ! Create a single regex that matches a range of letters between h and s, and a range of numbers between 2 and 6. Remember to include the appropriate flags in the regex.
+// let quoteSample = "Blueberry 3.141592653s are delicious.";
+// let myRegex = /[h-s2-6]/gi;
+// let result = quoteSample.match(myRegex);
+// console.log(result);
+
+//! Create a single regex that matches all characters that are not a number or a vowel. Remember to include the appropriate flags in the regex.
+// let quoteSample = "3 blind mice.";
+// let myRegex = /[^0-9^aeiou]/gi;
+// let result = quoteSample.match(myRegex);
+// console.log(result);
+
+//! You want to find matches when the letter s occurs one or more times in Mississippi. Write a regex that uses the + sign.
+// let difficultSpelling = "Mississippi";
+// let myRegex = /s+/gi;
+// let result = difficultSpelling.match(myRegex);
+
+//! For this challenge, chewieQuote has been initialized as the string Aaaaaaaaaaaaaaaarrrgh! behind the scenes. Create a regex chewieRegex that uses the * character to match an uppercase A character immediately followed by zero or more lowercase a characters in chewieQuote. Your regex does not need flags or character classes, and it should not match any of the other quotes.
+// let chewieRegex = /Aa*/;
+// let result = chewieQuote.match(chewieRegex);
+
+//! Fix the regex /<.*>/ to return the HTML tag <h1> and not the text "<h1>Winter is coming</h1>". Remember the wildcard . in a regular expression matches any character.
+// let text = "<h1>Winter is coming</h1>";
+// let myRegex = /<.*?>/; // Change this line
+// let result = text.match(myRegex);
+// console.log(result);
+
+//! Write a greedy regex that finds one or more criminals within a group of other people. A criminal is represented by the capital letter C.
+
+// let reCriminals = /C+/;
