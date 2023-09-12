@@ -519,5 +519,50 @@
 // console.log(result);
 
 //! Write a greedy regex that finds one or more criminals within a group of other people. A criminal is represented by the capital letter C.
-
 // let reCriminals = /C+/;
+
+//! Use the caret character in a regex to find Cal only in the beginning of the string rickyAndCal.
+// let rickyAndCal = "Cal and Ricky both like racing.";
+// let calRegex = /^Cal/;
+// let result = calRegex.test(rickyAndCal);
+
+//! Use the anchor character ($) to match the string caboose at the end of the string caboose.
+// let caboose = "The last car on a train is the caboose";
+// let lastRegex = /caboose$/;
+// let result = lastRegex.test(caboose);
+
+//! Use the shorthand character class \w to count the number of alphanumeric characters in various quotes and strings.
+// let quoteSample = "The five boxing wizards jump quickly.";
+// let alphabetRegexV2 = /\w/g;
+// let result = quoteSample.match(alphabetRegexV2).length;
+// console.log(result);
+
+//! Use the shorthand character class \W to count the number of non-alphanumeric characters in various quotes and strings.
+// let quoteSample = "The five boxing wizards jump quickly.";
+// let nonAlphabetRegex = /\W/g;
+// let result = quoteSample.match(nonAlphabetRegex).length;
+
+//! Use the shorthand character class \d to count how many digits are in movie titles. Written out numbers ("six" instead of 6) do not count.
+// let movieName = "2001: A Space Odyssey";
+// let numRegex = /\d/g;
+// let result = movieName.match(numRegex).length;
+
+//! Use the shorthand character class for non-digits \D to count how many non-digits are in movie titles.
+// let movieName = "2001: A Space Odyssey";
+// let noNumRegex = /\D/g;
+// let result = movieName.match(noNumRegex).length;
+
+//! Change the regex userCheck to fit the constraints listed above.
+//! Usernames can only use alpha-numeric characters.
+//! The only numbers in the username have to be at the end. There can be zero or more of them at the end. Username cannot start with the number.
+//! Username letters can be lowercase and uppercase.
+//! Usernames have to be at least two characters long. A two-character username can only use alphabet letters as characters.
+// let username = "JackOfAllTrades";
+// let bla = "c57bT3";
+// let geg = "Michle2";
+let userCheck = /^[a-z]([0-9]+$|\D+)/; // Change this line
+// let result = userCheck.test(username);
+
+// console.log(username.match(userCheck));
+// console.log(geg.match(userCheck));
+// console.log(bla.match(userCheck));
