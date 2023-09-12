@@ -245,7 +245,7 @@
 
 // const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES;
 
-// Replace the two assignments with an equivalent destructuring assignment. It should still assign the variables lowToday and highToday the values of today.low and today.high from the LOCAL_FORECAST object
+// ! Replace the two assignments with an equivalent destructuring assignment. It should still assign the variables lowToday and highToday the values of today.low and today.high from the LOCAL_FORECAST object
 
 // const LOCAL_FORECAST = {
 //   yesterday: { low: 61, high: 75 },
@@ -258,3 +258,128 @@
 // } = LOCAL_FORECAST;
 // console.log("lowTodat", lowToday);
 // console.log("highToday", highToday);
+
+//  ! Use destructuring assignment to swap the values of a and b so that a receives the value stored in b, and b receives the value stored in a.
+
+// let a = 8,
+//   b = 6;
+
+// [a, b] = [b, a]
+
+// ! Use a destructuring assignment with the rest syntax to emulate the behavior of Array.prototype.slice(). removeFirstTwo() should return a sub-array of the original array list with the first two elements omitted.
+
+// function removeFirstTwo(list) {
+//   const [a, b, ...arr] = list;
+
+//   return arr;
+// }
+
+// const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const sourceWithoutFirstTwo = removeFirstTwo(source);
+// console.log(sourceWithoutFirstTwo);
+
+// ! Use destructuring assignment within the argument to the function half to send only max and min inside the function.
+
+// const stats = {
+//   max: 56.78,
+//   standard_deviation: 4.34,
+//   median: 34.54,
+//   mode: 23.87,
+//   min: -0.75,
+//   average: 35.85
+// };
+
+// const half = ({max, min}) => (max + min) / 2.0;
+
+// !Use template literal syntax with backticks to create an array of list element (li) strings. Each list element's text should be one of the array elements from the failure property on the result object and have a class attribute with the value text-warning. The makeList function should return the array of list item strings.
+// !Use an iterator method (any kind of loop) to get the desired output (shown below).
+
+// [
+//  ! '<li class="text-warning">no-var</li>',
+//  ! '<li class="text-warning">var-on-top</li>',
+//  !  '<li class="text-warning">linebreak</li>',
+// ];
+
+// const result = {
+//   success: ["max-length", "no-amd", "prefer-arrow-functions"],
+//   failure: ["no-var", "var-on-top", "linebreak"],
+//   skipped: ["no-extra-semi", "no-dup-keys"],
+// };
+// function makeList(arr) {
+
+//   let failureItems = [];
+
+//   for (const item of arr) {
+//     failureItems.push(...[`<li class="text-warning">${item}</li>`]);
+//   }
+
+//   return failureItems;
+// }
+
+// const failuresList = makeList(result.failure);
+
+// console.log(failuresList);
+
+//! Use object property shorthand with object literals to create and return an object with name, age and gender properties.
+
+// const createPerson = (name, age, gender) => {
+//   return {
+//     name,
+//     age,
+//     gender,
+//   };
+// };
+
+//! Refactor the function setGear inside the object bicycle to use the shorthand syntax described above.
+
+// const bicycle = {
+//   gear: 2,
+//   setGear(newGear) {
+//     this.gear = newGear;
+//   }
+// };
+
+// bicycle.setGear(3);
+// console.log(bicycle.gear);
+
+// ! Use the class keyword and write a constructor to create the Vegetable class.
+// ! The Vegetable class allows you to create a vegetable object with a property name that gets passed to the constructor.
+
+// class Vegetable {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+
+// const carrot = new Vegetable("carrot");
+// console.log(carrot);
+// console.log(carrot.name);
+//! Use the class keyword to create a Thermostat class. The constructor accepts a Fahrenheit temperature.
+
+// !In the class, create a getter to obtain the temperature in Celsius and a setter to set the temperature in Celsius.
+
+//! Remember that C = 5/9 * (F - 32) and F = C * 9.0 / 5 + 32, where F is the value of temperature in Fahrenheit, and C is the value of the same temperature in Celsius.
+
+// !Note: When you implement this, you will track the temperature inside the class in one scale, either Fahrenheit or Celsius.
+
+// !This is the power of a getter and a setter. You are creating an API for another user, who can get the correct result regardless of which one you track.
+
+//! In other words, you are abstracting implementation details from the user.
+
+// class Thermostat {
+//   constructor(temperature) {
+//     this._temperature = (5 / 9) * (temperature - 32);
+//   }
+
+//   get temperature() {
+//     return this._temperature;
+//   }
+
+//   set temperature(updatedTemperature) {
+//     this._temperature = updatedTemperature;
+//   }
+// }
+
+// const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+
+// console.log(thermos.temp);
