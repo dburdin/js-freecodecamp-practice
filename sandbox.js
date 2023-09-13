@@ -554,15 +554,60 @@
 
 //! Change the regex userCheck to fit the constraints listed above.
 //! Usernames can only use alpha-numeric characters.
-//! The only numbers in the username have to be at the end. There can be zero or more of them at the end. Username cannot start with the number.
+//! Username cannot start with the number.
 //! Username letters can be lowercase and uppercase.
+//! The only numbers in the username have to be at the end. There can be zero or more of them at the end.
 //! Usernames have to be at least two characters long. A two-character username can only use alphabet letters as characters.
 // let username = "JackOfAllTrades";
 // let bla = "c57bT3";
 // let geg = "Michle2";
-let userCheck = /^[a-z]([0-9]+$|\D+)/; // Change this line
+let userCheck = /^[a-z]([a-z]+\d*|\d{2,})$/gi;
 // let result = userCheck.test(username);
 
 // console.log(username.match(userCheck));
 // console.log(geg.match(userCheck));
 // console.log(bla.match(userCheck));
+
+//! Change the regex countWhiteSpace to look for multiple whitespace characters in a string.
+// let sample = "Whitespace is important in separating words";
+// let countWhiteSpace = /\s/gi;
+// let result = sample.match(countWhiteSpace);
+
+//! Change the regex countNonWhiteSpace to look for multiple non-whitespace characters in a string.
+// let sample = "Whitespace is important in separating words";
+// let countNonWhiteSpace = /\S/gi;
+// let result = sample.match(countNonWhiteSpace);
+
+//! Change the regex ohRegex to match the entire phrase Oh no only when it has 3 to 6 letter h's.
+// let ohStr = "Ohhh no";
+// let ohRegex = /oh{3,6}\sno/gi;
+// let result = ohRegex.test(ohStr);
+
+//! Change the regex haRegex to match the word Hazzah only when it has four or more letter z's.
+// let haStr = "Hazzzzah";
+// let haRegex = /Haz{4,}ah/gi;
+// let result = haRegex.test(haStr);
+
+//! Change the regex timRegex to match the word Timber only when it has four letter m's.
+// let timStr = "Timmmmber";
+// let tim2 = "Timmmmmber";
+// let timRegex = /Tim{4}ber/gi;
+// let result = timRegex.test(timStr);
+// console.log(result);
+
+// !Change the regex favRegex to match both the American English (favorite) and the British English (favourite) version of the word.
+// let favWord = "favorite";
+// let favRegex = /favou?rite/gi;
+// let result = favRegex.test(favWord);
+
+//! Use lookaheads in the pwRegex to match passwords that are greater than 5 characters long, and have two consecutive digits.
+let sampleWord = "astronaut";
+let pwRegex = /^(?=\w{6,})(?=.*\d{2})/gi;
+let result = pwRegex.test(sampleWord);
+
+let quit = "qu";
+let noquit = "qt";
+let quRegex = /q(?=u)/;
+let qRegex = /q(?!u)/;
+console.log(quit.match(quRegex));
+console.log(noquit.match(qRegex));
