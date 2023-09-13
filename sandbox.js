@@ -561,7 +561,7 @@
 // let username = "JackOfAllTrades";
 // let bla = "c57bT3";
 // let geg = "Michle2";
-let userCheck = /^[a-z]([a-z]+\d*|\d{2,})$/gi;
+// let userCheck = /^[a-z]([a-z]+\d*|\d{2,})$/gi;
 // let result = userCheck.test(username);
 
 // console.log(username.match(userCheck));
@@ -601,13 +601,50 @@ let userCheck = /^[a-z]([a-z]+\d*|\d{2,})$/gi;
 // let result = favRegex.test(favWord);
 
 //! Use lookaheads in the pwRegex to match passwords that are greater than 5 characters long, and have two consecutive digits.
-let sampleWord = "astronaut";
-let pwRegex = /^(?=\w{6,})(?=.*\d{2})/gi;
-let result = pwRegex.test(sampleWord);
+// let sampleWord = "astronaut";
+// let pwRegex = /^(?=\w{6,})(?=.*\d{2})/gi;
+// let result = pwRegex.test(sampleWord);
 
-let quit = "qu";
-let noquit = "qt";
-let quRegex = /q(?=u)/;
-let qRegex = /q(?!u)/;
-console.log(quit.match(quRegex));
-console.log(noquit.match(qRegex));
+// let quit = "qu";
+// let noquit = "qt";
+// let quRegex = /q(?=u)/;
+// let qRegex = /q(?!u)/;
+// console.log(quit.match(quRegex));
+// console.log(noquit.match(qRegex));
+
+//! Fix the regex so that it checks for the names of Franklin Roosevelt or Eleanor Roosevelt in a case sensitive manner and it should make concessions for middle names.
+//! Then fix the code so that the regex that you have created is checked against myString and either true or false is returned depending on whether the regex matches.
+// let myString = "Eleanor Roosevelt";
+// let myRegex = /(Eleanor|Franklin\s.\.)\sRoosevelt/gi;
+// let result = myRegex.test(myString);
+
+//! Use capture groups in reRegex to match a string that consists of only the same number repeated exactly three times separated by single spaces.
+// let repeatNum = "42 42 42";
+// let reRegex = /^(\d+) \1 \1$/gi;
+// let result = reRegex.test(repeatNum);
+
+// console.log(repeatNum.match(reRegex));
+
+//!Write a regex fixRegex using three capture groups that will search for each word in the string one two three. Then update the replaceText variable to replace one two three with the string three two one and assign the result to the result variable. Make sure you are utilizing capture groups in the replacement string using the dollar sign ($) syntax.
+// let str = "one two three";
+// let fixRegex = /(\w+)\s(\w+)\s(\w+)/;
+// let replaceText = "$3 $2 $1";
+// console.log(replaceText);
+// let result = str.replace(fixRegex, replaceText);
+
+// console.log(result);
+
+//! Write a regex and use the appropriate string methods to remove whitespace at the beginning and end of strings.
+//! Note: The String.prototype.trim() method would work here, but you'll need to complete this challenge using regular expressions.
+// let hello = "   Hello, World!  ";
+// let wsRegex = /\s\s+/g;
+// let result = hello.replace(wsRegex, "");
+// console.log(result);
+
+// * DEBUGGING
+
+//! Fix the two spelling errors in the code so the netWorkingCapital calculation works.
+let receivables = 10;
+let payables = 8;
+let netWorkingCapital = receivables - payables;
+console.log(`Net working capital is: ${netWorkingCapital}`);
