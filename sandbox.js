@@ -1133,13 +1133,40 @@
 
 //! Repeat a given string str (first argument) for num times (second argument). Return an empty string if num is not a positive number. For the purpose of this challenge, do not use the built-in .repeat() method.
 // function repeatStringNumTimes(str, num) {
-//   let result = [];
+//   let result = "";
 //   while (num > 0) {
-//     result.push(str);
+//     result += str;
 
 //     num -= 1;
 //   }
-//   return result.join("");
+//   return result;
+// }
+// console.log(repeatStringNumTimes("*", 5));
+
+//! Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.
+// function truncateString(str, num) {
+//   if (str.length > num) {
+//     let cuttedText = str.slice(0, num);
+//     return cuttedText + "...";
+//   }
+//   return str;
 // }
 
-// console.log(repeatStringNumTimes("abc", 3));
+// console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
+
+//! Create a function that looks through an array arr and returns the first element in it that passes a 'truth test'. This means that given an element x, the 'truth test' is passed if func(x) is true. If no element passes the test, return undefined.
+// function findElement(arr, func) {
+//   let num = 0;
+
+//   for (const item of arr) {
+
+//     if (!func(item)) {
+//       num = undefined;
+//     } else {
+//       num = item;
+//       break;
+//     }
+//   }
+//   return num;
+// }
+// console.log(findElement([1, 2, 3, 4], (num) => num % 2 === 0));
