@@ -1159,14 +1159,136 @@
 //   let num = 0;
 
 //   for (const item of arr) {
-
-//     if (!func(item)) {
-//       num = undefined;
-//     } else {
-//       num = item;
+//      if (!func(item)) {
+//        num = undefined;
+//      } else {
+//        num = item;
 //       break;
-//     }
+//      }
+
+//     return (num = func(item) ? (num = item) : undefined);
 //   }
-//   return num;
 // }
 // console.log(findElement([1, 2, 3, 4], (num) => num % 2 === 0));
+
+//! Check if a value is classified as a boolean primitive. Return true or false.Boolean primitives are true and false.
+// function booWho(bool) {
+//   if (typeof bool !== "boolean") {
+//     return false;
+//   }
+//   return true;
+// }
+
+// booWho(null);
+
+//! Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.For the purpose of this exercise, you should also capitalize connecting words like the and of.
+// function titleCase(str) {
+//   let array = [];
+//   let result = "";
+//   for (const item of str) {
+//     array.push(item.toLowerCase());
+//   }
+//   let lowerCaseString = array.join("");
+//   let newArray = lowerCaseString.split(" ");
+//   for (let i = 0; i < newArray.length; i++) {
+//     const element = newArray[i];
+//     let nextArray = element.split("");
+//     nextArray[0] = nextArray[0].toUpperCase();
+
+//     let finalString = nextArray.join("");
+//     result = result + " " + finalString;
+//   }
+//   return result.trim();
+// }
+
+// function titleCase(str) {
+//   let words = str.toLowerCase().split(" ");
+
+//   for (let i = 0; i < words.length; i++) {
+//     let word = words[i];
+//     words[i] = word.charAt(0).toUpperCase() + word.slice(1);
+//   }
+
+//   return words.join(" ");
+// }
+
+// console.log(titleCase("sHoRt AnD sToUt"));
+// console.log(titleCase("I'm a little tea pot"));
+// console.log(titleCase("HERE IS MY HANDLE HERE IS MY SPOUT"));
+
+// !You are given two arrays and an index.
+// !Copy each element of the first array into the second array, in order.
+// !Begin inserting elements at index n of the second array.
+// !Return the resulting array. The input arrays should remain the same after the function runs.
+
+// function frankenSplice(arr1, arr2, n) {
+//   let newArr = [...arr2];
+//   newArr.splice(n, 0, ...arr1);
+
+//   return newArr;
+// }
+
+// console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
+// console.log(frankenSplice([1, 2], ["a", "b"], 1));
+
+//! Видаліть всі неправильні значення з масиву. Поверніть новий масив; не змінюйте вихідний масив.
+//! Неправильні значення в JavaScript: false, null, 0, "", undefined та NaN.
+//! Підказка: спробуйте перетворити кожне значення у булеве.
+// function bouncer(arr) {
+//   let result = [];
+//   for (const item of arr) {
+//     if (Boolean(item)) {
+//       result.push(item);
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(bouncer([7, "ate", "", false, 9]));
+
+//! Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.
+
+//! For example, getIndexToIns([1,2,3,4], 1.5) should return 1 because it is greater than 1 (index 0), but less than 2 (index 1).
+
+//! Likewise, getIndexToIns([20,3,5], 19) should return 2 because once the array has been sorted it will look like [3,5,20] and 19 is less than 20 (index 2) and greater than 5 (index 1).
+
+// function getIndexToIns(arr, num) {
+//   let result = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (num > arr[i]) {
+//       result += arr.indexOf(arr[1]);
+//     }
+//   }
+//   return result;
+// }
+
+// console.log("getIndexToIns([40, 60], 50);", getIndexToIns([40, 60], 50));
+
+// !Поверніть true, якщо рядок у першому елементі масиву містить усі літери рядка у другому елементі масиву.
+// !Наприклад, ["hello", "Hello"] має повертати true, оскільки всі літери другого рядка наявні у першому, незважаючи на регістр. Аргументи ["hello", "hey"] мають повертати false, оскільки рядок hello не містить y. ["Alien", "line"] має повертати true, оскільки всі літери в line наявні в Alien.
+
+// function mutation(arr) {
+//   let firstEl = arr[0].toLowerCase();
+//   let secondEl = arr[1].toLowerCase();
+//   for (let i = 0; i < secondEl.length; i++) {
+//     const element = secondEl[i].toLowerCase();
+//     if (firstEl.indexOf(element) === -1) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// mutation(["hello", "hey"]);
+
+// Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
+function chunkArrayInGroups(arr, size) {
+  let result = [];
+  while (arr.length) {
+    result.push(arr.splice(0, size));
+  }
+
+  return result;
+}
+
+console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
