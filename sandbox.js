@@ -1394,3 +1394,150 @@
 //     return false;
 //   }
 // }
+
+//! Add the property numLegs and the two methods eat() and describe() to the prototype of Dog by setting the prototype to a new object.
+// function Dog(name) {
+//   this.name = name;
+// }
+
+// Dog.prototype = {
+//   numLegs: 4,
+//   eat() {
+//     console.log("nom nom nom");
+//   },
+//   describe() {
+//     console.log("Hello");
+//   },
+// };
+
+//! Define the constructor property on the Dog prototype.
+// function Dog(name) {
+//   this.name = name;
+// }
+
+// // Only change code below this line
+// Dog.prototype = {
+//   constructor: Dog,
+//   numLegs: 4,
+//   eat: function () {
+//     console.log("nom nom nom");
+//   },
+//   describe: function () {
+//     console.log("My name is " + this.name);
+//   },
+// };
+
+//! Use isPrototypeOf to check the prototype of beagle.
+// function Dog(name) {
+//   this.name = name;
+// }
+
+// let beagle = new Dog("Snoopy");
+
+// Dog.prototype.isPrototypeOf(beagle);
+
+// Only change code below this line
+
+//! The hasOwnProperty method is defined in Object.prototype, which can be accessed by Bird.prototype, which can then be accessed by duck. This is an example of the prototype chain. In this prototype chain, Bird is the supertype for duck, while duck is the subtype. Object is a supertype for both Bird and duck. Object is a supertype for all objects in JavaScript. Therefore, any object can use the hasOwnProperty method.
+// function Dog(name) {
+//   this.name = name;
+// }
+
+// let beagle = new Dog("Snoopy");
+
+// Dog.prototype.isPrototypeOf(beagle); // yields true
+
+// // Fix the code below so that it evaluates to true
+// Object.prototype.isPrototypeOf(Dog.prototype);
+
+//! The eat method is repeated in both Cat and Bear. Edit the code in the spirit of DRY by moving the eat method to the Animal supertype.
+// function Cat(name) {
+//   this.name = name;
+// }
+
+// Cat.prototype = {
+//   constructor: Cat,
+// };
+
+// function Bear(name) {
+//   this.name = name;
+// }
+
+// Bear.prototype = {
+//   constructor: Bear,
+// };
+
+// function Animal() {}
+
+// Animal.prototype = {
+//   constructor: Animal,
+//   eat() {
+//     console.log("nom nom nom");
+//   },
+// };
+
+// Use Object.create to make two instances of Animal named duck and beagle.
+// function Animal() {}
+
+// Animal.prototype = {
+//   constructor: Animal,
+//   eat: function () {
+//     console.log("nom nom nom");
+//   },
+// };
+
+// // Only change code below this line
+
+// let duck = Object.create(Animal.prototype);
+// let beagle = Object.create(Animal.prototype);
+
+//! Modify the code so that instances of Dog inherit from Animal.
+// function Animal() {}
+
+// Animal.prototype = {
+//   constructor: Animal,
+//   eat: function () {
+//     console.log("nom nom nom");
+//   },
+// };
+
+// function Dog() {}
+
+// // Only change code below this line
+// Dog.prototype = Object.create(Animal.prototype);
+// let beagle = new Dog();
+
+//! Fix the code so duck.constructor and beagle.constructor return their respective constructors.
+// function Animal() {}
+// function Bird() {}
+// function Dog() {}
+
+// Bird.prototype = Object.create(Animal.prototype);
+// Dog.prototype = Object.create(Animal.prototype);
+
+// // Only change code below this line
+// Bird.prototype.constructor = Bird;
+// Dog.prototype.constructor = Dog;
+// let duck = new Bird();
+// let beagle = new Dog();
+
+//! Add all necessary code so the Dog object inherits from Animal and the Dog's prototype constructor is set to Dog. Then add a bark() method to the Dog object so that beagle can both eat() and bark(). The bark() method should print Woof! to the console.
+
+// function Animal() {}
+// Animal.prototype.eat = function () {
+//   console.log("nom nom nom");
+// };
+
+// function Dog() {}
+
+// // Only change code below this line
+// Dog.prototype = Object.create(Animal.prototype);
+// Dog.prototype.constructor = Dog;
+// Dog.prototype.bark = function () {
+//   console.log("Woof!");
+// };
+// // Only change code above this line
+
+// let beagle = new Dog();
+
+//! Override the fly() method for Penguin so that it returns the string Alas, this is a flightless bird.
