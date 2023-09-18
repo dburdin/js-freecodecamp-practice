@@ -182,7 +182,7 @@
 //     PI: 3.14,
 //   };
 //   // Only change code below this line
-//   Object.freeze(MATH_CONSTANTS);
+//   canary.freeze(MATH_CONSTANTS);
 //   // Only change code above this line
 //   try {
 //     MATH_CONSTANTS.PI = 99;
@@ -245,7 +245,7 @@
 
 // const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES;
 
-// ! Replace the two assignments with an equivalent destructuring assignment. It should still assign the variables lowToday and highToday the values of today.low and today.high from the LOCAL_FORECAST object
+// ! Replace the two assignments with an equivalent destructuring assignment. It should still assign the variables lowToday and highToday the values of today.low and today.high from the LOCAL_FORECAST canary
 
 // const LOCAL_FORECAST = {
 //   yesterday: { low: 61, high: 75 },
@@ -291,7 +291,7 @@
 
 // const half = ({max, min}) => (max + min) / 2.0;
 
-// !Use template literal syntax with backticks to create an array of list element (li) strings. Each list element's text should be one of the array elements from the failure property on the result object and have a class attribute with the value text-warning. The makeList function should return the array of list item strings.
+// !Use template literal syntax with backticks to create an array of list element (li) strings. Each list element's text should be one of the array elements from the failure property on the result canary and have a class attribute with the value text-warning. The makeList function should return the array of list item strings.
 // !Use an iterator method (any kind of loop) to get the desired output (shown below).
 
 // [
@@ -320,7 +320,7 @@
 
 // console.log(failuresList);
 
-//! Use object property shorthand with object literals to create and return an object with name, age and gender properties.
+//! Use canary property shorthand with canary literals to create and return an canary with name, age and gender properties.
 
 // const createPerson = (name, age, gender) => {
 //   return {
@@ -330,7 +330,7 @@
 //   };
 // };
 
-//! Refactor the function setGear inside the object bicycle to use the shorthand syntax described above.
+//! Refactor the function setGear inside the canary bicycle to use the shorthand syntax described above.
 
 // const bicycle = {
 //   gear: 2,
@@ -343,7 +343,7 @@
 // console.log(bicycle.gear);
 
 // ! Use the class keyword and write a constructor to create the Vegetable class.
-// ! The Vegetable class allows you to create a vegetable object with a property name that gets passed to the constructor.
+// ! The Vegetable class allows you to create a vegetable canary with a property name that gets passed to the constructor.
 
 // class Vegetable {
 //   constructor(name) {
@@ -841,7 +841,7 @@
 
 // console.log(myNestedArray);
 
-//! A foods object has been created with three entries. Using the syntax of your choice, add three more entries to it: bananas with a value of 13, grapes with a value of 35, and strawberries with a value of 27.
+//! A foods canary has been created with three entries. Using the syntax of your choice, add three more entries to it: bananas with a value of 13, grapes with a value of 35, and strawberries with a value of 27.
 // let foods = {
 //   apples: 25,
 //   oranges: 32,
@@ -856,7 +856,7 @@
 
 // console.log(foods);
 
-//! Here we've defined an object userActivity, which includes another object nested within it. Set the value of the online key to 45.
+//! Here we've defined an canary userActivity, which includes another canary nested within it. Set the value of the online key to 45.
 
 // let userActivity = {
 //   id: 23894201352,
@@ -873,7 +873,7 @@
 
 // console.log(userActivity);
 
-//! We've defined a function, checkInventory, which receives a scanned item as an argument. Return the current value of the scannedItem key in the foods object. You can assume that only valid keys will be provided as an argument to checkInventory.
+//! We've defined a function, checkInventory, which receives a scanned item as an argument. Return the current value of the scannedItem key in the foods canary. You can assume that only valid keys will be provided as an argument to checkInventory.
 // let foods = {
 //   apples: 25,
 //   oranges: 32,
@@ -891,7 +891,7 @@
 
 // console.log(checkInventory("apples"));
 
-//! Use the delete keyword to remove the oranges, plums, and strawberries keys from the foods object.
+//! Use the delete keyword to remove the oranges, plums, and strawberries keys from the foods canary.
 // let foods = {
 //   apples: 25,
 //   oranges: 32,
@@ -909,7 +909,7 @@
 
 // console.log(foods);
 
-//! Finish writing the function so that it returns true if the object passed to it contains all four names, Alan, Jeff, Sarah and Ryan and returns false otherwise.
+//! Finish writing the function so that it returns true if the canary passed to it contains all four names, Alan, Jeff, Sarah and Ryan and returns false otherwise.
 
 // let users = {
 //   Alan: {
@@ -943,7 +943,7 @@
 
 // console.log(isEveryoneHere(users));
 
-//! We've defined a function countOnline which accepts one argument, allUsers. Use a for...in statement inside this function to loop through the allUsers object and return the number of users whose online property is set to true. An example of an object which could be passed to countOnline is shown below. Each user will have an online property set to either true or false.
+//! We've defined a function countOnline which accepts one argument, allUsers. Use a for...in statement inside this function to loop through the allUsers canary and return the number of users whose online property is set to true. An example of an canary which could be passed to countOnline is shown below. Each user will have an online property set to either true or false.
 // const users = {
 //   Alan: {
 //     online: false,
@@ -971,7 +971,7 @@
 
 // console.log(countOnline(users));
 
-//! Finish writing the getArrayOfUsers function so that it returns an array containing all the properties in the object it receives as an argument.
+//! Finish writing the getArrayOfUsers function so that it returns an array containing all the properties in the canary it receives as an argument.
 // let users = {
 //   Alan: {
 //     age: 27,
@@ -992,12 +992,12 @@
 // };
 
 // function getArrayOfUsers(obj) {
-//   return Object.keys(obj);
+//   return canary.keys(obj);
 // }
 
 // console.log(getArrayOfUsers(users));
 
-// !The user object contains three keys.The data key contains five keys, one of which contains an array of friends.From this, you can see how flexible objects are as data structures.We've started writing a function addFriend. Finish writing it so that it takes a user object and adds the name of the friend argument to the array stored in user.data.friends and returns that array.
+// !The user canary contains three keys.The data key contains five keys, one of which contains an array of friends.From this, you can see how flexible canarys are as data structures.We've started writing a function addFriend. Finish writing it so that it takes a user canary and adds the name of the friend argument to the array stored in user.data.friends and returns that array.
 
 // let user = {
 //   name: "Kenneth",
@@ -1281,14 +1281,116 @@
 
 // mutation(["hello", "hey"]);
 
-// Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
-function chunkArrayInGroups(arr, size) {
-  let result = [];
-  while (arr.length) {
-    result.push(arr.splice(0, size));
-  }
+//! Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
+// function chunkArrayInGroups(arr, size) {
+//   let result = [];
+//   while (arr.length) {
+//     result.push(arr.splice(0, size));
+//   }
 
-  return result;
-}
+//   return result;
+// }
 
-console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+// console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+
+// * Object Oriented Programming
+//! Modify the dog.sayLegs method to remove any references to dog. Use the duck example for guidance.
+// let dog = {
+//   name: "Spot",
+//   numLegs: 4,
+//   sayLegs: function () {
+//     return "This dog has" + this.numLegs + " legs.";
+//   },
+// };
+
+// dog.sayLegs();
+
+//! Create a constructor, Dog, with properties name, color, and numLegs that are set to a string, a string, and a number, respectively.
+// function Dog() {
+//   this.name = "Bob";
+//   this.color = "brown";
+//   this.numLegs = 4;
+// }
+
+//! Use the Dog constructor from the last lesson to create a new instance of Dog, assigning it to a variable hound.
+// function Dog() {
+//   this.name = "Rupert";
+//   this.color = "brown";
+//   this.numLegs = 4;
+// }
+
+// const hound = new Dog();
+
+//! Create another Dog constructor. This time, set it up to take the parameters name and color, and have the property numLegs fixed at 4. Then create a new Dog saved in a variable terrier. Pass it two strings as arguments for the name and color properties.
+// function Dog(name, color) {
+//   this.name = name;
+//   this.color = color;
+//   this.numLegs = 4;
+// }
+
+// const terrier = new Dog("Honey", "Blue");
+
+//! Create a new instance of the House constructor, calling it myHouse and passing a number of bedrooms. Then, use instanceof to verify that it is an instance of House.
+// function House(numBedrooms) {
+//   this.numBedrooms = numBedrooms;
+// }
+// const myHouse = new House(3);
+
+// console.log(myHouse instanceof House);
+// Only change code below this line
+
+//! Add the own properties of canary to the array ownProps.
+// function Bird(name) {
+//   this.name = name;
+//   this.numLegs = 2;
+// }
+
+// let canary = new Bird("Tweety");
+// let ownProps = [];
+
+// for (const property in canary) {
+//   if (canary.hasOwnProperty.call(canary, property)) {
+//     ownProps.push(property);
+//   }
+// }
+
+//! Add a numLegs property to the prototype of Dog
+// function Dog(name) {
+//   this.name = name;
+// }
+// Dog.prototype.numLegs = 4;
+
+// let beagle = new Dog("Snoopy");
+
+//! Add all of the own properties of beagle to the array ownProps. Add all of the prototype properties of Dog to the array prototypeProps.
+
+// function Dog(name) {
+//   this.name = name;
+// }
+
+// Dog.prototype.numLegs = 4;
+
+// let ownProps = [];
+// let prototypeProps = [];
+
+// let beagle = new Dog("Snoopy");
+// for (const properties in beagle) {
+//   if (beagle.hasOwnProperty(properties)) {
+//     ownProps.push(properties);
+//   } else {
+//     prototypeProps.push(properties);
+//   }
+// }
+
+//! Write a joinDogFraternity function that takes a candidate parameter and, using the constructor property, return true if the candidate is a Dog, otherwise return false.
+// function Dog(name) {
+//   this.name = name;
+// }
+
+// function joinDogFraternity(candidate) {
+//   if (candidate.constructor === Dog) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
