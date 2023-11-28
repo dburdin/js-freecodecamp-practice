@@ -2128,3 +2128,38 @@
 
 // const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
 // console.log(squaredIntegers);
+
+//* Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem
+
+// function alphabeticalOrder(arr) {
+//   return arr.sort();
+// }
+
+// console.log(alphabeticalOrder(["a", "d", "c", "a", "z", "g"]));
+
+//* Return a Sorted Array Without Changing the Original Array
+// const globalArray = [5, 6, 3, 2, 9];
+
+// function nonMutatingSort(arr) {
+//   return [...arr].sort((a, b) => a - b);
+// }
+
+// const sortedArray = nonMutatingSort(globalArray);
+// console.log(sortedArray);
+
+//* Split a String into an Array Using the split Method
+// function splitify(str) {
+
+//   return str.split(/\s|\-|\,|\./gi);
+
+// }
+
+// console.log(splitify("Hello World,I-am code"));
+
+// function sentensify(str) {
+
+//   return str.split(/\s|\-|\,|\./gi).join(" ");
+
+// }
+
+// console.log(sentensify("May-the-force-be-with-you"));
