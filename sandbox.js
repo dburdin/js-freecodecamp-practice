@@ -181,9 +181,9 @@
 //   const MATH_CONSTANTS = {
 //     PI: 3.14,
 //   };
-//   // Only change code below this line
+
 //   canary.freeze(MATH_CONSTANTS);
-//   // Only change code above this line
+
 //   try {
 //     MATH_CONSTANTS.PI = 99;
 //   } catch (ex) {
@@ -751,21 +751,20 @@
 
 //! We have defined a function, forecast, that takes an array as an argument. Modify the function using slice() to extract information from the argument array and return a new array that contains the string elements warm and sunny.
 // function forecast(arr) {
-//   // Only change code below this line
+
 //   const newArr = arr.slice(2, 4);
 //   return newArr;
 // }
 
-// // Only change code above this line
 // console.log(forecast(["cold", "rainy", "warm", "sunny", "cool", "thunderstorms"]));
 
 //! We have defined a function, copyMachine which takes arr (an array) and num (a number) as arguments. The function is supposed to return a new array made up of num copies of arr. We have done most of the work for you, but it doesn't work quite right yet. Modify the function using spread syntax so that it works correctly (hint: another method we have already covered might come in handy here!).
 // function copyMachine(arr, num) {
 //   let newArr = [];
 //   while (num >= 1) {
-//     // Only change code below this line
+
 //     newArr.push([...arr]);
-//     // Only change code above this line
+
 //     num--;
 //   }
 //   return newArr;
@@ -797,7 +796,7 @@
 
 // function filteredArray(arr, elem) {
 //   let newArr = [];
-//   // Only change code below this line
+
 //   for (let i = 0; i < arr.length; i++) {
 //     const element = arr[i];
 
@@ -805,7 +804,7 @@
 //       newArr.push(element);
 //     }
 //   }
-//   // Only change code above this line
+
 //   return newArr;
 // }
 
@@ -825,7 +824,7 @@
 //! We have defined a variable, myNestedArray, set equal to an array. Modify myNestedArray, using any combination of strings, numbers, and booleans for data elements, so that it has exactly five levels of depth (remember, the outer-most array is level 1). Somewhere on the third level, include the string deep, on the fourth level, include the string deeper, and on the fifth level, include the string deepest.
 
 // let myNestedArray = [
-//   // Only change code below this line
+
 //   ["unshift", false, 1, 2, 3, "complex", "nested"],
 //   [
 //     ["loop", "shift", 6, 7, 1000, "deep"],
@@ -836,7 +835,6 @@
 //   ],
 //   ["concat", false, true, "spread", "hi"],
 
-//   // Only change code above this line
 // ];
 
 // console.log(myNestedArray);
@@ -848,11 +846,9 @@
 //   plums: 28,
 // };
 
-// // Only change code below this line
 // foods.bananas = 13;
 // foods.grapes = 35;
 // foods.strawberries = 27;
-// // Only change code above this line
 
 // console.log(foods);
 
@@ -867,9 +863,7 @@
 //   },
 // };
 
-// // Only change code below this line
 // userActivity.data.online = 45;
-// // Only change code above this line
 
 // console.log(userActivity);
 
@@ -884,9 +878,9 @@
 // };
 
 // function checkInventory(scannedItem) {
-//   // Only change code below this line
+
 //   return foods[scannedItem];
-//   // Only change code above this line
+
 // }
 
 // console.log(checkInventory("apples"));
@@ -901,11 +895,9 @@
 //   strawberries: 27,
 // };
 
-// // Only change code below this line
 // delete foods.oranges;
 // delete foods.plums;
 // delete foods.strawberries;
-// // Only change code above this line
 
 // console.log(foods);
 
@@ -957,7 +949,7 @@
 // };
 
 // function countOnline(allUsers) {
-//   // Only change code below this line
+
 //   let total = 0;
 
 //   for (const user in allUsers) {
@@ -966,7 +958,7 @@
 //     }
 //   }
 //   return total;
-//   // Only change code above this line
+
 // }
 
 // console.log(countOnline(users));
@@ -1016,14 +1008,14 @@
 // };
 
 // function addFriend(userObj, friend) {
-//   // Only change code below this line
+
 //   const {
 //     data: { friends },
 //   } = userObj;
 
 //   friends.push(friend);
 //   return friends;
-//   // Only change code above this line
+
 // }
 
 // console.log(addFriend(user, "Pete"));
@@ -1415,7 +1407,6 @@
 //   this.name = name;
 // }
 
-// // Only change code below this line
 // Dog.prototype = {
 //   constructor: Dog,
 //   numLegs: 4,
@@ -1486,8 +1477,6 @@
 //   },
 // };
 
-// // Only change code below this line
-
 // let duck = Object.create(Animal.prototype);
 // let beagle = Object.create(Animal.prototype);
 
@@ -1503,7 +1492,6 @@
 
 // function Dog() {}
 
-// // Only change code below this line
 // Dog.prototype = Object.create(Animal.prototype);
 // let beagle = new Dog();
 
@@ -1515,7 +1503,6 @@
 // Bird.prototype = Object.create(Animal.prototype);
 // Dog.prototype = Object.create(Animal.prototype);
 
-// // Only change code below this line
 // Bird.prototype.constructor = Bird;
 // Dog.prototype.constructor = Dog;
 // let duck = new Bird();
@@ -1628,14 +1615,11 @@
 
 // // When you close a tab
 // Window.prototype.tabClose = function (index) {
-//   // Only change code below this line
 
 //   const tabsBeforeIndex = this.tabs.slice(0, index); // Get the tabs before the tab
 //   const tabsAfterIndex = this.tabs.slice(index + 1); // Get the tabs after the tab
 
 //   this.tabs = tabsBeforeIndex.concat(tabsAfterIndex); // Join them together
-
-//   // Only change code above this line
 
 //   return this;
 // };
@@ -1652,7 +1636,7 @@
 //   .join(workWindow.tabClose(1).tabOpen());
 // console.log(finalTabs.tabs);
 
-//* Use the map Method to Extract Data from an Array
+//! Use the map Method to Extract Data from an Array
 
 // The global variable
 // const watchList = [
@@ -1775,17 +1759,13 @@
 //   },
 // ];
 
-// // Only change code below this line
-
 // const ratings = watchList.map((item) => {
 //   return { title: item.Title, rating: item.imdbRating };
 // });
 
-// // Only change code above this line
-
 // console.log(JSON.stringify(ratings));
 
-//* Implement map on a Prototype
+//! Implement map on a Prototype
 
 // Array.prototype.myMap = function (callback) {
 //   const newArray = [];
@@ -1797,7 +1777,7 @@
 //   return newArray;
 // };
 
-//* Use the filter Method to Extract Data from an Array
+//! Use the filter Method to Extract Data from an Array
 
 // const watchList = [
 //   {
@@ -1925,7 +1905,7 @@
 
 // console.log(filteredList);
 
-//* Implement the filter Method on a Prototype
+//! Implement the filter Method on a Prototype
 
 // Array.prototype.myFilter = function (callback) {
 //   const newArray = [];
@@ -1937,7 +1917,7 @@
 //   return newArray;
 // };
 
-//* Return Part of an Array Using the slice Method
+//! Return Part of an Array Using the slice Method
 
 // function sliceArray(anim, beginSlice, endSlice) {
 //   const newArray = anim.slice(beginSlice, endSlice);
@@ -1945,7 +1925,7 @@
 //   return newArray;
 // }
 
-//* Remove Elements from an Array Using slice Instead of splice
+//! Remove Elements from an Array Using slice Instead of splice
 
 // function nonMutatingSplice(cities) {
 //   return cities.slice(0, 3);
@@ -1954,7 +1934,7 @@
 // const cities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
 // console.log(nonMutatingSplice(cities));
 
-//* Combine Two Arrays Using the concat Method
+//! Combine Two Arrays Using the concat Method
 
 // function nonMutatingConcat(original, attach) {
 //   return original.concat(attach);
@@ -1964,7 +1944,7 @@
 // const second = [4, 5];
 // nonMutatingConcat(first, second);
 
-//* Add Elements to the End of an Array Using concat Instead of push
+//! Add Elements to the End of an Array Using concat Instead of push
 
 // function nonMutatingPush(original, newItem) {
 //   return original.concat(newItem);
@@ -1974,7 +1954,7 @@
 // const second = [4, 5];
 // console.log(nonMutatingPush(first, second));
 
-//* Use the reduce Method to Analyze Data
+//! Use the reduce Method to Analyze Data
 
 // const watchList = [
 //   {
@@ -2113,12 +2093,12 @@
 
 // console.log(getRating(watchList));
 
-//* Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem
+//! Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem
 
 // const squareList = (arr) => {
 //   let resultArr = arr.reduce((acc, el) => {
 //     if (el > 0 && el % 1 === 0) {
-//       acc.push(el * el);
+//       acc.push(el ! el);
 //     }
 //     return acc;
 //   }, []);
@@ -2129,7 +2109,7 @@
 // const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
 // console.log(squaredIntegers);
 
-//* Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem
+//! Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem
 
 // function alphabeticalOrder(arr) {
 //   return arr.sort();
@@ -2137,7 +2117,7 @@
 
 // console.log(alphabeticalOrder(["a", "d", "c", "a", "z", "g"]));
 
-//* Return a Sorted Array Without Changing the Original Array
+//! Return a Sorted Array Without Changing the Original Array
 // const globalArray = [5, 6, 3, 2, 9];
 
 // function nonMutatingSort(arr) {
@@ -2147,7 +2127,7 @@
 // const sortedArray = nonMutatingSort(globalArray);
 // console.log(sortedArray);
 
-//* Split a String into an Array Using the split Method
+//! Split a String into an Array Using the split Method
 // function splitify(str) {
 
 //   return str.split(/\s|\-|\,|\./gi);
@@ -2164,7 +2144,7 @@
 
 // console.log(sentensify("May-the-force-be-with-you"));
 
-//* Apply Functional Programming to Convert Strings to URL Slugs
+//! Apply Functional Programming to Convert Strings to URL Slugs
 
 // function urlSlug(title) {
 //   let url = "";
@@ -2183,3 +2163,30 @@
 // }
 
 // console.log(urlSlug(" Winter Is  Coming"));
+
+//! Apply Functional Programming to Convert Strings to URL Slugs
+// function checkPositive(arr) {
+//   return arr.every((el) => el > 0);
+// }
+
+// console.log(checkPositive([1, 2, 3, -4, 5]));
+
+//! Introduction to Currying and Partial Application
+// function add(x) {
+//   return function (y) {
+//     return function (z) {
+//       return x + y + z;
+//     };
+//   };
+// }
+
+// console.log(add(10)(20)(30));
+
+// * Intermediate Algorithm Scripting
+
+//! Sum All Numbers in a Range
+function sumAll(arr) {
+  return 1;
+}
+
+sumAll([1, 4]);
