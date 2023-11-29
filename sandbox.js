@@ -2163,3 +2163,23 @@
 // }
 
 // console.log(sentensify("May-the-force-be-with-you"));
+
+//* Apply Functional Programming to Convert Strings to URL Slugs
+
+// function urlSlug(title) {
+//   let url = "";
+//   let array = title.toLowerCase().split(" ");
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] === "") {
+//       continue;
+//     }
+//     if (array[i + 1] !== undefined) {
+//       url = url + array[i] + "-";
+//     } else {
+//       url = url + array[i];
+//     }
+//   }
+//   return url;
+// }
+
+// console.log(urlSlug(" Winter Is  Coming"));
