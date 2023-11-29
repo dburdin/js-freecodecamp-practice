@@ -2185,8 +2185,42 @@
 // * Intermediate Algorithm Scripting
 
 //! Sum All Numbers in a Range
-function sumAll(arr) {
-  return 1;
+// function sumAll(arr) {
+//   let minNumber = arr[0] > arr[1] ? arr[1] : arr[0];
+//   let maxNumber = arr[0] > arr[1] ? arr[0] : arr[1];
+//   let result = 0;
+
+//   for (let i = minNumber; i <= maxNumber; i += 1) {
+//     result += i;
+//   }
+
+//   return result;
+// }
+
+// console.log(sumAll([1, 4]));
+
+//! Diff Two Arrays
+function diffArray(arr1, arr2) {
+  const newArr = [];
+  const biggerArr = arr1.length < arr2.length ? [...arr2] : [...arr1];
+  const smallerArr = arr1.length < arr2.length ? [...arr1] : [...arr2];
+
+  for (let i = 0; i < biggerArr.length; i += 1) {
+    if (smallerArr.includes(biggerArr[i])) {
+      continue;
+    } else {
+      newArr.push(biggerArr[i]);
+    }
+  }
+  for (let j = 0; j < smallerArr.length; j += 1) {
+    if (biggerArr.includes(smallerArr[j])) {
+      continue;
+    } else {
+      newArr.push(smallerArr[j]);
+    }
+  }
+
+  return newArr;
 }
 
-sumAll([1, 4]);
+console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
